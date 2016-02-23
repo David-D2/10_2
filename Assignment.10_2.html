@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <!-- Assignment – Create module “myapp” and controller “ mycontroller” with
+         scope properties such as “name and last name”. -->
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://localhost:56130/angular.min.js"></script>
+    <script type="text/javascript">
+        var myapp = angular.module('myapp', []);
+        //$scope is used to pass select variables
+        myapp.controller('mycontroller', function ($scope) {
+            $scope.name = 'Dave';
+            $scope.lastname = 'Dickson';
+        }
+        );
+    </script>
+</head>
+<body>
+    <div ng-controller="mycontroller">
+        <!--Go look for a controller called mycontroller-->
+        <div>
+            The complete name is {{name + " " + lastname}}
+        </div>
+    </div>
+</body>
+</html>
